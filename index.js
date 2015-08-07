@@ -1,17 +1,16 @@
-var bowerResolve = require('bower-resolve');
+var wiredep = require('wiredep');
 
 function createPattern(path) {
   return {pattern: path, included: true, served: true, watched: false};
 }
 
-importMatchers.$inject = ['config.files', 'config.bowerPackages'];
-function importMatchers(files, bowerPackages) {
-  bowerPackages.slice().reverse().forEach(function(pkg) {
-    var absolutePath = bowerResolve.fastReadSync(pkg);
-    files.unshift(createPattern(absolutePath));
+importDependencies.$inject = ['config.files', 'config.wiredep'];
+function importDependencies(files, options) {
+  wiredep(options).js.slice().reverse().forEach(function(dep) {
+    files.unshift(createPattern(dep));
   });
 }
 
 module.exports = {
-  'framework:bower': ['factory', importMatchers]
+  'framework:wiredep': ['factory', importDependencies]
 };

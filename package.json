@@ -1,7 +1,7 @@
 {
-  "name": "karma-bower",
-  "version": "1.0.1",
-  "description": "Loads bower packages into your test scope",
+  "name": "karma-wiredep",
+  "version": "0.0.1",
+  "description": "Loads bower dependencies into your test scope",
   "main": "index.js",
   "scripts": {
     "prepublish": "bower install",
@@ -10,16 +10,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/just-boris/karma-bower.git"
+    "url": "https://github.com/lbragaglia/karma-wiredep.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/just-boris/karma-bower/issues"
+    "url": "https://github.com/lbragaglia/karma-wiredep/issues"
   },
-  "homepage": "https://github.com/just-boris/karma-bower",
+  "homepage": "https://github.com/lbragaglia/karma-wiredep",
   "dependencies": {
-    "bower-resolve": "^2.2.1"
+    "wiredep": "^2.2.2"
   },
   "devDependencies": {
     "bower": "^1.4.1",

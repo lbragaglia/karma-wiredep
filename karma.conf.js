@@ -2,19 +2,18 @@ module.exports = function(config) {
     config.plugins.push(require('./index.js'));
     config.set({
         basePath: '',
-        frameworks: ['bower', 'jasmine'],
+        frameworks: ['wiredep', 'jasmine'],
         files: [
             'test/*.js'
         ],
         reporters: ['progress'],
-        bowerPackages: [
-            'jquery',
-            'sinonjs',
-            'jasmine-ajax',
-            'chai',
-            'jasmine-jquery',
-            'bem-matchers'
-        ],
+        wiredep: {
+            "overrides": {
+                "package-without-main": {
+                    "main": "dist/package-without-main.js"
+                }
+            }
+        },
 
         browsers: ['Firefox', 'PhantomJS']
     });
