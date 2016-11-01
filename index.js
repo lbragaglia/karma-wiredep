@@ -7,6 +7,7 @@ function createPattern(path) {
 
 importDependencies.$inject = ['config.files', 'config.wiredep', 'config.basePath'];
 function importDependencies(files, options, basePath) {
+  options = options || {};
   options.cwd = path.resolve(basePath, options.cwd || '');  // Relative paths resolve from Karma basePath
   wiredep(options).js.slice().reverse().forEach(function(dep) {
     files.unshift(createPattern(dep));
