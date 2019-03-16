@@ -1,4 +1,4 @@
-# karma-wiredep [![Build Status](https://travis-ci.org/lbragaglia/karma-wiredep.svg?branch=master)](https://travis-ci.org/lbragaglia/karma-wiredep)
+# karma-wiredep [![Build Status](https://travis-ci.org/lbragaglia/karma-wiredep.svg?branch=master)](https://travis-ci.org/lbragaglia/karma-wiredep) [![Greenkeeper badge](https://badges.greenkeeper.io/lbragaglia/karma-wiredep.svg)](https://greenkeeper.io/)
 
 > Loads bower dependencies into your test scope. 
 
